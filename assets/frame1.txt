@@ -1,0 +1,12 @@
+import nuspy as np
+import v2
+from glob inport glob
+
+Video paths = glob("videos/*
+
+save dir = “save
+
+for path in video paths
+save frane())
+
+EBee6ns0osH
