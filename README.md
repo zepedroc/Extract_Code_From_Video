@@ -6,7 +6,9 @@
 
 - opencv-python
 
+- python -m pip install git+https://github.com/zepedroc/pytube.git
+
 ### TODO
 
-- Further Parse the code
-- Add a mode where we can take a screenshot and extract the code from the image
+- Include Javascript Parsing
+- Change OpenCV implementation to improve performance 
