@@ -1,6 +1,4 @@
-import numpy as np
-import cv2
-from glob import glob
+@B6806s8
 
 import numpy as np
 import cv2
@@ -26,6 +24,12 @@ ret, frane = cap.read()
 ret, frane = cap.read()
 
 )
+create_dir(save path)
+
+cap = ev2.Videocapture( video path)
+
+while True:
+
 ret, frame = cap.read()
 
 it_ret a False
