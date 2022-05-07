@@ -2,7 +2,8 @@ import os
 import pytesseract
 import cv2 as cv
 
-from codeParsing import parsePython
+from pythonFuncs import parsePython
+
 
 def convert_video_to_text():
     print('Processing...')
@@ -34,6 +35,7 @@ def convert_video_to_text():
                 updated_text = parsePython(text)
 
                 new_frame_lines = updated_text.splitlines()
+
                 line_found = False
                 txt_file = open("assets/textFromVideo.txt", "r")
                 saved_lines = txt_file.readlines()
@@ -76,4 +78,4 @@ def convert_video_to_text():
         totalFrames += 1
 
     # When everything done, release the capture
-    vid.release()    
+    vid.release()

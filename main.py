@@ -1,6 +1,4 @@
-import os
 from time import time
-from checkResult import check_correct_result
 from convertVideoToText import convert_video_to_text
 from downloadFromYoutube import download_youtube_video
 

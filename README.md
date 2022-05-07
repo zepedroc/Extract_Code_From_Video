@@ -10,5 +10,6 @@
 
 ### TODO
 
-- Include Javascript Parsing
-- Change OpenCV implementation to improve performance 
+- Add javascript conversion
+- Add normal text conversion
+- Change OpenCV implementation to improve frame readability
