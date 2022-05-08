@@ -47,7 +47,7 @@ def convert_video_to_text(lang):
                         break
                     for idx2, saved_line in enumerate(saved_lines):
                         # replace new line and the rest of the frame on the old file
-                        if new_line.strip() == saved_line.strip():
+                        if new_line.strip() == saved_line.strip() and len(new_line.strip().split()) > 1:
                             line_found = True
                             for x in range(len(new_frame_lines) - idx1):
                                 if idx2 + x < len(saved_lines):

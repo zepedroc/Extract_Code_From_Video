@@ -20,9 +20,16 @@ def parseJavascript(text):
                 final_text += '\n'
                 continue
 
+        # remove non-sense expressions like '7)' or 'ad)'
+        new_line = re.sub(r'^[0-9A-Za-z]+\)', '', new_line)
+
         # if the line is not javascript, skip it
         if not javascriptCheck(new_line):
             continue
+
+        # removes the numbers of the editor lines
+        new_line = re.sub(r'^[0-9]+\s*', '', new_line)
+
 
         new_line = new_line.replace('. ', '.')
         new_line = new_line.replace('fonsole', 'console')
@@ -47,6 +54,11 @@ def javascriptCheck(text):
      # if it starts or ends with a '=' then it's not javascript
     if re.search(r'^=|=$', text):
         return False
+
+    # if it starts with a ')' and has a word or number after
+    if re.search(r'^\)\s\w', text):
+        return False   
+
 
     if re.search(r'\(|\)|=|\{|\}|\[|\]', text):
         return True

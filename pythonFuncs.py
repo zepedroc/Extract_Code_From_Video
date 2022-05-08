@@ -22,9 +22,15 @@ def parsePython(text):
         new_line = line.replace('inport', 'import')
         new_line = new_line.replace('fron', 'from')
 
+        # remove non-sense expressions like '7)' or 'ad)'
+        new_line = re.sub(r'^[0-9A-Za-z]+\)', '', new_line)
+
         # if the line is not python, skip it
         if not pythonCheck(new_line):
             continue
+
+        # removes the numbers of the editor lines
+        new_line = re.sub(r'^[0-9]+\s*', '', new_line)
 
         new_line = new_line.replace('nuspy', 'numpy')
         new_line = new_line.replace('“', '"')
@@ -50,7 +56,7 @@ def pythonCheck(text):
         return True
 
     # if it starts with a '(' then it's not python
-    if re.search(r'^\(', text):
+    if re.search(r'^[\(|\)]', text):
         return False
 
      # if it starts or ends with a '=' then it's not python

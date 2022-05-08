@@ -1,5 +1,5 @@
 from time import time
-from languages import ACCEPTED_LANGUAGES, chooseLang
+from languages import chooseLang
 from convertVideoToText import convert_video_to_text
 from downloadFromYoutube import download_youtube_video
 

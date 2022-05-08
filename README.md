@@ -12,3 +12,4 @@
 
 - Change OpenCV implementation to improve frame readability
 - Maybe use threads to improve performance
+- Convert Image to Text
