@@ -1,12 +1,12 @@
 import os
 import pytesseract
 import cv2 as cv
+from languages import handle_lang
 
-from pythonFuncs import parsePython
 
+def convert_video_to_text(lang):
+    print('\nProcessing...')
 
-def convert_video_to_text():
-    print('Processing...')
     # add tesseract to the path
     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
 
@@ -32,8 +32,9 @@ def convert_video_to_text():
         if totalFrames % 300 == 0:
             text = pytesseract.image_to_string(frame, lang="eng")
             if len(text) >= 100:  # skip frames with less code
-                updated_text = parsePython(text)
 
+                # update text based on the chosen language
+                updated_text = handle_lang(text, lang)
                 new_frame_lines = updated_text.splitlines()
 
                 line_found = False

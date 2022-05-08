@@ -10,6 +10,5 @@
 
 ### TODO
 
-- Add javascript conversion
-- Add normal text conversion
 - Change OpenCV implementation to improve frame readability
+- Maybe use threads to improve performance
