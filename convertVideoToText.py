@@ -7,9 +7,6 @@ from languages import handle_lang
 def convert_video_to_text(lang):
     print('\nProcessing...')
 
-    # add tesseract to the path
-    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
-
     vid = cv.VideoCapture('assets/videoSample.mp4')
 
     totalFrames = 0

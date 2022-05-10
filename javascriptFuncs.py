@@ -60,7 +60,7 @@ def javascriptCheck(text):
         return False   
 
 
-    if re.search(r'\(|\)|=|\{|\}|\[|\]', text):
+    if re.search(r'\(|\)|=|\{|\}|\[|\]|\:|\,', text):
         return True
 
     return False

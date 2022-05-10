@@ -2,6 +2,10 @@ from time import time
 from languages import chooseLang
 from convertVideoToText import convert_video_to_text
 from downloadFromYoutube import download_youtube_video
+import pytesseract
+
+# add tesseract to the path
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
 
 start_time = time()
 

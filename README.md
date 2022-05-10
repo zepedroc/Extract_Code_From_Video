@@ -10,6 +10,6 @@
 
 ### TODO
 
-- Change OpenCV implementation to improve frame readability
-- Maybe use threads to improve performance
-- Convert Image to Text
+- Make an API out of this
+- Separate Coding Lang from Text Language
+- Improve Performance: Maybe use threads to process the video in multiple ways and return the result with more characters
